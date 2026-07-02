@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Princess 💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: linear-gradient(180deg, #ffd6e8, #fff7fb);
+  color: #5c2a3d;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+section {
+  min-height: 100vh;
+  padding: 70px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  background: rgba(255,255,255,0.92);
+  padding: 38px;
+  border-radius: 30px;
+  max-width: 820px;
+  width: 100%;
+  box-shadow: 0 15px 40px rgba(180,80,120,0.22);
+}
+
+h1 {
+  font-size: 46px;
+  color: #d94f8c;
+}
+
+h2 {
+  font-size: 32px;
+  color: #7d3f58;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 21px;
+}
+
+button {
+  background: #ff6fae;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 17px;
+  margin: 12px;
+  box-shadow: 0 8px 18px rgba(255,111,174,0.35);
+}
+
+button:hover {
+  transform: scale(1.07);
+}
+
+.hidden {
+  display: none;
+}
+
+.envelope {
+  font-size: 120px;
+  cursor: pointer;
+  animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.flower {
+  position: fixed;
+  top: -50px;
+  font-size: 26px;
+  animation: fall linear forwards;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: fixed;
+  animation: floatUp 5s linear forwards;
+  font-size: 28px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+
+#surprise {
+  margin-top: 25px;
+  color: #d94f8c;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+#surprise h2 {
+  font-size: 36px;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 34px; }
+  h2 { font-size: 26px; }
+  .card { padding: 28px; }
+  .envelope { font-size: 90px; }
+}
+</style>
+</head>
+
+<body>
+
+<section>
+  <div class="card">
+    <h1>To My Princess 💗🌸</h1>
+    <p class="quote">
+      Every flower blooms because of the sun.<br>
+      I bloom because of you.
+    </p>
+    <p>I made this little website specially for you.</p>
+    <button onclick="showEnvelope()">Open My Heart 💌</button>
+  </div>
+</section>
+
+<section id="envelopeSection" class="hidden">
+  <div class="card">
+    <h2>A Letter Just For You 💌</h2>
+    <div class="envelope" onclick="showLetter()">💌</div>
+    <p>Click the envelope to open it</p>
+  </div>
+</section>
+
+<section id="letterSection" class="hidden">
+  <div class="card">
+    <h2>My Letter To You 💌</h2>
+
+    <p>
+      Dear Izzah,<br><br>
+
+      Thank you for being someone so special in my life. You make my day brighter, my heart softer, and my life happier. I am truly grateful for every moment we've shared together. From the very first time we started talking, I knew that you were someone I wanted to build a future with, grow old with, and create countless beautiful memories together.
+      <br><br>
+
+      No matter what happens, whether it's disagreements, misunderstandings, or difficult times, I want you to know that I will always stay by your side. Through every smile and every challenge, you will always be my special person, and I will never stop choosing you. 💗
+      <br><br>
+
+      Lily of the Valley is your favorite flower, and every time I see it, it reminds me of you. It reminds me of your gentle heart, your kindness, and the happiness you bring into my life.
+      <br><br>
+
+      I also want to say that I am truly sorry for everything that has happened between us. Whether I hurt you intentionally or unintentionally, I never want to be the reason behind your sadness. I'm sorry for the times I've disappointed you, made you cry, or made you feel anything less than how truly loved you are. You deserve so much better, and I promise that I'll continue learning, growing, and becoming a better person for us.
+      <br><br>
+
+      I hope this little gesture brings a smile to your face because you deserve all the happiness, all the love, and every beautiful thing this world has to offer.
+      <br><br>
+
+      Thank you for loving me, for believing in me, and for staying with me through everything.
+      <br><br>
+
+      I love you so much, today, tomorrow, and always. 💗
+    </p>
+
+    <button onclick="showFinal()">Open My Surprise 🎁</button>
+
+    <div id="surprise" class="hidden">
+      <h2>I Love You 💗</h2>
+      <p>
+        No matter what happens,<br>
+        I will always choose you.<br><br>
+
+        Thank you for being my home, my comfort, my safe place,
+        and my favorite person.<br><br>
+
+        Forever and always. 🤍
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+function createFlower() {
+  const flowers = ["🌸", "🌷", "🌺", "💮", "🌼", "💗"];
+  const flower = document.createElement("div");
+
+  flower.className = "flower";
+  flower.innerHTML = flowers[Math.floor(Math.random() * flowers.length)];
+  flower.style.left = Math.random() * 100 + "vw";
+  flower.style.animationDuration = 6 + Math.random() * 6 + "s";
+  flower.style.fontSize = 20 + Math.random() * 18 + "px";
+
+  document.body.appendChild(flower);
+
+  setTimeout(() => flower.remove(), 12000);
+}
+
+setInterval(createFlower, 300);
+
+function showEnvelope() {
+  document.getElementById("envelopeSection").classList.remove("hidden");
+  document.getElementById("envelopeSection").scrollIntoView({ behavior: "smooth" });
+}
+
+function showLetter() {
+  document.getElementById("letterSection").classList.remove("hidden");
+  document.getElementById("letterSection").scrollIntoView({ behavior: "smooth" });
+}
+
+function showFinal() {
+  document.getElementById("surprise").classList.remove("hidden");
+  createHearts();
+}
+
+function createHearts() {
+  for (let i = 0; i < 45; i++) {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = "💗";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDelay = Math.random() * 2 + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 6000);
+  }
+}
+</script>
+
+</body>
+</html>

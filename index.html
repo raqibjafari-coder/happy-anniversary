@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For My Princess 💗</title>
+<title>Happy Anniversary, My Princess! 💗</title>
 
 <style>
 * {
@@ -68,6 +68,7 @@ button {
   font-size: 17px;
   margin: 12px;
   box-shadow: 0 8px 18px rgba(255,111,174,0.35);
+  transition: transform 0.2s ease;
 }
 
 button:hover {
@@ -155,19 +156,19 @@ button:hover {
 
 <section>
   <div class="card">
-    <h1>To My Princess 💗🌸</h1>
+    <h1>Happy Anniversary, My Princess! 💗🌸</h1>
     <p class="quote">
       Every flower blooms because of the sun.<br>
       I bloom because of you.
     </p>
-    <p>I made this little website specially for you.</p>
+    <p>I made this little website specially to celebrate us.</p>
     <button onclick="showEnvelope()">Open My Heart 💌</button>
   </div>
 </section>
 
 <section id="envelopeSection" class="hidden">
   <div class="card">
-    <h2>A Letter Just For You 💌</h2>
+    <h2>An Anniversary Letter Just For You 💌</h2>
     <div class="envelope" onclick="showLetter()">💌</div>
     <p>Click the envelope to open it</p>
   </div>
@@ -175,9 +176,9 @@ button:hover {
 
 <section id="letterSection" class="hidden">
   <div class="card">
-    <h2>My Letter To You 💌</h2>
+    <h2>Happy Anniversary, Izzah! 💌</h2>
 
-    <p>
+    <p style="text-align: left; max-width: 700px; margin: 0 auto;">
       Dear Izzah,<br><br>
 
       Thank you for being someone so special in my life. You make my day brighter, my heart softer, and my life happier. I am truly grateful for every moment we've shared together. From the very first time we started talking, I knew that you were someone I wanted to build a future with, grow old with, and create countless beautiful memories together.
@@ -192,7 +193,7 @@ button:hover {
       I also want to say that I am truly sorry for everything that has happened between us. Whether I hurt you intentionally or unintentionally, I never want to be the reason behind your sadness. I'm sorry for the times I've disappointed you, made you cry, or made you feel anything less than how truly loved you are. You deserve so much better, and I promise that I'll continue learning, growing, and becoming a better person for us.
       <br><br>
 
-      I hope this little gesture brings a smile to your face because you deserve all the happiness, all the love, and every beautiful thing this world has to offer.
+      I hope this little gesture brings a smile to your face on our special day because you deserve all the happiness, all the love, and every beautiful thing this world has to offer.
       <br><br>
 
       Thank you for loving me, for believing in me, and for staying with me through everything.
@@ -201,10 +202,11 @@ button:hover {
       I love you so much, today, tomorrow, and always. 💗
     </p>
 
+    <br>
     <button onclick="showFinal()">Open My Surprise 🎁</button>
 
     <div id="surprise" class="hidden">
-      <h2>I Love You 💗</h2>
+      <h2>Happy Anniversary! 💗</h2>
       <p>
         No matter what happens,<br>
         I will always choose you.<br><br>
@@ -212,7 +214,7 @@ button:hover {
         Thank you for being my home, my comfort, my safe place,
         and my favorite person.<br><br>
 
-        Forever and always. 🤍
+        Here's to us, and to forever. 🤍
       </p>
     </div>
   </div>
@@ -220,7 +222,8 @@ button:hover {
 
 <script>
 function createFlower() {
-  const flowers = ["🌸", "🌷", "🌺", "💮", "🌼", "💗"];
+  // Added 🌿 and 🤍 to hint at Lily of the Valley colors alongside the blossoms!
+  const flowers = ["🌸", "🌷", "🌿", "🤍", "🌼", "💗"];
   const flower = document.createElement("div");
 
   flower.className = "flower";
@@ -248,6 +251,7 @@ function showLetter() {
 
 function showFinal() {
   document.getElementById("surprise").classList.remove("hidden");
+  document.getElementById("surprise").scrollIntoView({ behavior: "smooth" });
   createHearts();
 }
 
